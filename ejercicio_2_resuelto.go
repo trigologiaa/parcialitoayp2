@@ -13,7 +13,7 @@ func (l *List[T]) RotarResuelto(posiciones int) {
 	if rotarIzquierda {
 		for range posiciones {
 			ultimo := l.Tail().Data()
-			l.centinelaCabeza.next.InsertAfter(ultimo)
+			l.centinelaCabeza.InsertAfter(ultimo)
 			l.tamanio++
 			l.RemoveLast()
 		}
